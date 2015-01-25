@@ -1,0 +1,24 @@
+#! /usr/bin/env ruby
+
+print "Fat: "
+fat = gets.strip
+
+print "Protein: "
+protein = gets.strip
+
+print "Carbohydrates: "
+carbs = gets.strip
+
+fat_calories = fat.to_f*9
+carb_calories = carbs.to_f*4
+protein_calories = protein.to_f*4
+total_calories = fat_calories + carb_calories + protein_calories
+
+fat_portion     = ((fat_calories/total_calories) * 100).truncate
+protein_portion = ((protein_calories/total_calories) * 100).truncate
+carb_portion    = ((carb_calories/total_calories) * 100).truncate
+
+output = "\n\n"
+output << "Total Calories\n#{total_calories}\n\n"
+output << "Fat/Protein/Carb ratio\n#{fat_portion}%/#{protein_portion}%/#{carb_portion}%"
+puts output
