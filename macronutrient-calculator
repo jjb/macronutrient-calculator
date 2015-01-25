@@ -14,9 +14,9 @@ carb_calories = carbs.to_f*4
 protein_calories = protein.to_f*4
 total_calories = fat_calories + carb_calories + protein_calories
 
-fat_portion     = ((fat_calories/total_calories) * 100).truncate
-protein_portion = ((protein_calories/total_calories) * 100).truncate
-carb_portion    = ((carb_calories/total_calories) * 100).truncate
+fat_portion     = ((fat_calories/total_calories) * 100).round
+protein_portion = ((protein_calories/total_calories) * 100).round
+carb_portion    = ((carb_calories/total_calories) * 100).round
 
 output = "\n\n"
 output << "Total Calories\n#{total_calories}\n\n"
